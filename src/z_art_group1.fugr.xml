@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>劇團相關函式群組</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZ_ART_GROUP1TOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZ_ART_GROUP1</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z_GET_ART1</FUNCNAME>
+     <SHORT_TEXT>根據劇團類型查詢劇團</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>ARTTYPE</PARAMETER>
+       <TYP>ZART-ARTTYPE</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ARTRESULTS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZART_TBLTYPE</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_DATA_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>ARTTYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>劇團類型Data Element</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ARTRESULTS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>劇團資料表類型</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_DATA_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>查無相關劇團資料</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
